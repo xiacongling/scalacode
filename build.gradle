@@ -1,0 +1,18 @@
+plugins {
+    id 'scala'
+//    id 'application'
+}
+
+group 'me.xiacongling.code'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.scala-lang:scala-library:2.13.7")
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.scalatest:scalatest_2.13:3.2.10")
+    testImplementation("org.scalatestplus:junit-4-13_2.13:3.2.2.0")
+}
