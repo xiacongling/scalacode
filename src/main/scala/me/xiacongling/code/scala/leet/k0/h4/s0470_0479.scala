@@ -40,8 +40,8 @@ object s0470_0479 {
     val heaterSorted: Array[Int] = heaters.sorted
     houses.map(h => {
       val i: Int = heaterSorted.search(h).insertionPoint
-      val l: Int = if (i <= 0) Int.MaxValue else (h - heaterSorted(i - 1)).abs
-      val r: Int = if (i >= n) Int.MaxValue else (h - heaterSorted(i)).abs
+      val l: Int = if (i <= 0) Int.MaxValue else h - heaterSorted(i - 1)
+      val r: Int = if (i >= n) Int.MaxValue else heaterSorted(i) - h
       math.min(l, r)
     }).max
   }
