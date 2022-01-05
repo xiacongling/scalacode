@@ -14,5 +14,7 @@ class s1150_1159Test extends AnyFunSuite with should.Matchers {
     dayOfYear("2003-03-01") should be(60)
     dayOfYear("2004-03-01") should be(61)
     dayOfYear("2004-09-01") should be(245)
+
+    dayOfYear("1980-12-21") should be(0)
   }
 }
