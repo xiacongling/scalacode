@@ -1,6 +1,6 @@
 package me.xiacongling.code.scala.leet.k1.h6
 
-import me.xiacongling.code.scala.leet.k1.h6.s1610_1619.visiblePoints
+import me.xiacongling.code.scala.leet.k1.h6.s1610_1619.{maxDepth, visiblePoints}
 import org.junit.runner.RunWith
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should
@@ -41,5 +41,12 @@ class s1610_1619Test extends AnyFunSuite with should.Matchers {
     visiblePoints(List(List(2, 1), List(2, 2), List(3, 3)), 90, List(1, 1)) should be(3)
     visiblePoints(List(List(2, 1), List(2, 2), List(3, 4), List(1, 1)), 90, List(1, 1)) should be(4)
     visiblePoints(List(List(1, 0), List(2, 1)), 13, List(1, 1)) should be(1)
+  }
+
+  test("Test Cases for #1614") {
+    maxDepth("(1+(2*3)+((8)/4))+1") shouldBe 3
+    maxDepth("(1)+((2))+(((3)))") shouldBe 3
+    maxDepth("1+(2*3)/(2-1)") shouldBe 1
+    maxDepth("1") shouldBe 0
   }
 }
