@@ -58,4 +58,4 @@ object s1620_1629 {
       .map(it => (keysPressed(it._2), it._1))
       .sortWith((a, b) => a._2 > b._2 || a._2 == b._2 && a._1 > b._1)
       .head._1
-
+}
