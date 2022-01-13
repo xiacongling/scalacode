@@ -1,6 +1,6 @@
 package me.xiacongling.code.scala.leet.k0.h7
 
-import me.xiacongling.code.scala.leet.k0.h7.s0740_0749.shortestCompletingWord
+import me.xiacongling.code.scala.leet.k0.h7.s0740_0749.{dominantIndex, shortestCompletingWord}
 import org.junit.runner.RunWith
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should
@@ -8,6 +8,12 @@ import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class s0740_0749Test extends AnyFunSuite with should.Matchers {
+  test("Test Cases for #747") {
+    dominantIndex(Array(3, 6, 1, 0)) shouldBe 1
+    dominantIndex(Array(1, 2, 3, 4)) shouldBe -1
+    dominantIndex(Array(1)) shouldBe 0
+  }
+
   test("Test Cases for #748") {
     shortestCompletingWord(
       "1s3 PSt",
