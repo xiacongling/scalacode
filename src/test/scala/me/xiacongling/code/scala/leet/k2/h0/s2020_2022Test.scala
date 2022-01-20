@@ -1,6 +1,6 @@
 package me.xiacongling.code.scala.leet.k2.h0
 
-import me.xiacongling.code.scala.leet.k2.h0.s2020_2022.construct2DArray
+import me.xiacongling.code.scala.leet.k2.h0.s2020_2022.{construct2DArray, stoneGameIX}
 import org.junit.runner.RunWith
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should
@@ -17,5 +17,11 @@ class s2020_2022Test extends AnyFunSuite with should.Matchers {
     )
     construct2DArray(Array(1, 2), 1, 1) should be(Array())
     construct2DArray(Array(3), 1, 2) should be(Array())
+  }
+
+  test("Test Cases for #2029") {
+    stoneGameIX(Array(2, 1)) shouldBe true
+    stoneGameIX(Array(2)) shouldBe false
+    stoneGameIX(Array(5, 1, 2, 4, 3)) shouldBe false
   }
 }
